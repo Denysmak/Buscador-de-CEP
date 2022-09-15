@@ -6,7 +6,10 @@
     flex-direction: column;
     background: linear-gradient(#121212, #212b46);
 }
-
+.nome{
+    color: white;
+    animation: flipTitle 2s;
+}
 .title{
     font-size: 85px;
     color: white;
