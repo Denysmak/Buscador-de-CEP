@@ -1,13 +1,13 @@
 import {useState} from 'react';
 import {FiSearch} from 'react-icons/fi';
 import './style.css';
-import api from './services/api'
-
+import api from './services/api';
+import ManageData from './componentes/ManageData'
 
 function App() {
   const [input, setInput] = useState('');
   const [cep, setCep] = useState({});
-
+    const [n1, setN1] = useState(0);
   async function handleSearch(){
     //550820210/json/
 
@@ -30,6 +30,8 @@ function App() {
     <div className="container">
       <h1 className="nome">Denys Makene</h1>
       <h1 className="title">Buscador CEP</h1>
+      <ManageData />
+
       <div className="containerInput">
         <input type="text" placeholder="Digite seu cep..." value={input}
         onChange={(e) => {setInput(e.target.value)}}></input>
